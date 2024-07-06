@@ -5,14 +5,17 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, ##778A4A, #feb47b); /* Gradient background */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
 }
 
 header {
     background: #333;
     color: #fff;
     padding: 10px 0;
-    text-align: Right corner;
+}
+
+nav {
+    text-align: left; /* Align nav items to the left */
 }
 
 nav ul {
@@ -42,7 +45,7 @@ section {
 section h1 {
     margin-top: 0;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 section article {
@@ -60,9 +63,56 @@ section article ul {
 footer {
     background: #333;
     color: #fff;
-    text-align: left;
+    text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+#name {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+#name span {
+    display: inline-block;
+    opacity: 0;
+    animation: typing 0.2s forwards;
+}
+
+#name span:nth-child(1) { animation-delay: 0.2s; }
+#name span:nth-child(2) { animation-delay: 0.4s; }
+#name span:nth-child(3) { animation-delay: 0.6s; }
+#name span:nth-child(4) { animation-delay: 0.8s; }
+#name span:nth-child(5) { animation-delay: 1s; }
+#name span:nth-child(6) { animation-delay: 1.2s; }
+#name span:nth-child(7) { animation-delay: 1.4s; }
+#name span:nth-child(8) { animation-delay: 1.6s; }
+#name span:nth-child(9) { animation-delay: 1.8s; }
+#name span:nth-child(10) { animation-delay: 2s; }
+#name span:nth-child(11) { animation-delay: 2.2s; }
+#name span:nth-child(12) { animation-delay: 2.4s; }
+#name span:nth-child(13) { animation-delay: 2.6s; }
+#name span:nth-child(14) { animation-delay: 2.8s; }
+#name span:nth-child(15) { animation-delay: 3s; }
+#name span:nth-child(16) { animation-delay: 3.2s; }
+#name span:nth-child(17) { animation-delay: 3.4s; }
+#name span:nth-child(18) { animation-delay: 3.6s; }
+#name span:nth-child(19) { animation-delay: 3.8s; }
+#name span:nth-child(20) { animation-delay: 4s; }
+#name span:nth-child(21) { animation-delay: 4.2s; }
+#name span:nth-child(22) { animation-delay: 4.4s; }
+#name span:nth-child(23) { animation-delay: 4.6s; }
+#name span:nth-child(24) { animation-delay: 4.8s; }
