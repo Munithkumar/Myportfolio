@@ -5,204 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muneeth Kumar Vangari - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Basic styles for the header and hamburger menu */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-            background: #222;
-            color: #fff;
-            padding: 10px 20px;
-            position: relative;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-        }
-        .menu {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .menu li {
-            margin: 0 10px;
-        }
-        .menu a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .hamburger div {
-            width: 30px;
-            height: 3px;
-            background: #fff;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            background: #333;
-            position: absolute;
-            top: 50px;
-            right: 10px;
-            width: 200px;
-            border-radius: 5px;
-        }
-        .mobile-menu a {
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            border-bottom: 1px solid #444;
-            display: block;
-        }
-        .mobile-menu a:hover {
-            background: #555;
-        }
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-            }
-            .hamburger {
-                display: flex;
-            }
-        }
-        section {
-            padding: 20px;
-            background: #f4f4f4;
-            margin: 10px 0;
-        }
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            margin-top: 0;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-        }
-        .contact-info a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <ul class="menu">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav id="menu" class="hidden">
+            <ul>
                 <li><a href="#summary">Summary</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
             </ul>
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="#summary">Summary</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-            </div>
         </nav>
+        <h1 id="name">Muneeth Kumar Vangari</h1>
     </header>
-    <main class="container">
+    <main>
         <section id="summary">
-            <h1>Muneeth Kumar Vangari</h1>
-            <div class="contact-info">
-                <a href="mailto:Munithkumar55@gmail.com">Munithkumar55@gmail.com</a>
-                <a href="https://www.linkedin.com/in/muneeth-kumar-vangari" target="_blank">LinkedIn</a>
-                <span>+1(929) 425-6414</span>
-                <span>Rolla, Missouri (Open to Relocate)</span>
-            </div>
             <h2>Summary</h2>
-            <p>Dynamic professional with 2.3 years of experience in Python, SQL, and cloud technologies, specializing in scalable e-commerce development. Expertise in optimizing database performance, managing full software development life cycles, and enhancing data processing capabilities. Known for strong analytical prowess and effective collaboration in cross-functional teams.</p>
+            <p>Dynamic professional with 2.3 years of experience in Python, SQL, and cloud technologies, specializing in scalable e-commerce development...</p>
         </section>
         <section id="education">
             <h2>Education</h2>
-            <p><strong>Missouri University of Science and Technology</strong> (Jan 2023 – Dec 2024)<br>
-            Master of Science – Information Science and Technology (GPA – 3.5)<br>
-            Relevant Coursework: Managing the Cloud, Database Design, Software Systems Design, Project Management</p>
-            <p><strong>Jawaharlal Nehru Technological University, Hyderabad</strong> (Aug 2016 – Oct 2020)<br>
-            Bachelor of Technology – Computer Science and Engineering (Grade – A)</p>
+            <p><strong>Missouri University of Science and Technology</strong> - Master of Science – Information Science and Technology (GPA: 3.5)...</p>
+            <p><strong>Jawaharlal Nehru Technological University, Hyderabad</strong> - Bachelor of Technology – Computer Science and Engineering (Grade: A)...</p>
         </section>
         <section id="skills">
             <h2>Skills</h2>
-            <p><strong>Database Management & Query Languages:</strong> SQL, MySQL, Oracle SQL, SQL Server, Basic Teradata Query<br>
-            <strong>Programming Languages:</strong> Python, Java, C, C++<br>
-            <strong>Big Data Technologies:</strong> PySpark, Hadoop, Hive, Sqoop<br>
-            <strong>Data Visualization:</strong> Tableau<br>
-            <strong>Version Control:</strong> GitHub<br>
-            <strong>Integrated Development Environments (IDEs):</strong> Visual Studio Code (VSCode), Sublime Text<br>
-            <strong>Cloud Platforms & Development Tools:</strong> AWS (Amazon S3, EC2, RDS, Redshift, Lambda), GCP (BigQuery, Dataproc, Cloud Storage)<br>
-            <strong>Scripting & Automation:</strong> Shell Scripting/Linux<br>
-            <strong>Soft Skills:</strong> Leadership, Problem-Solving, Communication, Collaboration, Time Management, Adaptability, Self-learning</p>
+            <p><strong>Database Management & Query Languages:</strong> SQL, MySQL, Oracle SQL, SQL Server, Basic Teradata Query...</p>
+            <p><strong>Programming Languages:</strong> Python, Java, C, C++...</p>
+            <p><strong>Big Data Technologies:</strong> PySpark, Hadoop, Hive, Sqoop...</p>
+            <p><strong>Data Visualization:</strong> Tableau...</p>
+            <p><strong>Version Control:</strong> GitHub...</p>
+            <p><strong>IDEs:</strong> Visual Studio Code (VSCode), Sublime Text...</p>
+            <p><strong>Cloud Platforms & Development Tools:</strong> AWS (S3, EC2, RDS, Redshift, Lambda), GCP (BigQuery, Dataproc, Cloud Storage)...</p>
+            <p><strong>Scripting & Automation:</strong> Shell Scripting/Linux...</p>
+            <p><strong>Soft Skills:</strong> Leadership, Problem-Solving, Communication, Collaboration, Time Management, Adaptability, Self-Learning...</p>
         </section>
         <section id="experience">
             <h2>Experience</h2>
-            <p><strong>Transportation Specialist - I (Relay of Operations) – Amazon, India</strong> (Jun 2022 – Dec 2022)<br>
-            • Analyzed transportation metrics with SQL, Tableau, and Excel to drive efficiency improvements and optimize delivery processes.<br>
-            • Coordinated transportation operations using Amazon TMS and Relay for timely and cost-effective deliveries, leveraging GPS tracking and route optimization software to maximize efficiency.<br>
-            • Ensured regulatory compliance with safety standards using Amazon's compliance management software and implemented safety protocols.<br>
-            • Collaborated with cross-functional teams using Amazon Chime and Slack to resolve transportation issues promptly.<br>
-            • Optimized logistics operations with Lean and Six Sigma methodologies, enhancing process efficiency.<br>
-            • Monitored shipment statuses in real-time using Amazon's logistics dashboard and utilized Amazon Redshift and Tableau for data analytics to reduce transportation costs and identify trends.</p>
-            <p><strong>IT Associate (Device and Digital Alexa and Kindle Operations) – Amazon, India</strong> (Oct 2020 – May 2022)<br>
-            • Automated routine tasks and processes using Python and AWS Lambda, enhancing operational efficiency and reducing manual intervention.<br>
-            • Conducted data analysis and validation using SQL and MySQL to monitor system performance and improve data accuracy and integrity.<br>
-            • Utilized diagnostic tools and scripts, including Amazon's proprietary diagnostic platforms and Python, to identify and resolve technical issues with digital devices and services.<br>
-            • Provided technical support and troubleshooting for Amazon Kindle, Alexa, and other digital devices, utilizing Amazon Connect and Salesforce CRM to manage and resolve client issues efficiently.<br>
-            • Developed and maintained comprehensive support documentation and knowledge base articles using Confluence and SharePoint, aiding in effective troubleshooting and client education.<br>
-            • Monitored, analyzed, and prevented concession abuse to uphold policy compliance and mitigate fraudulent activities related to concessions at Amazon.<br>
-            • Guided a team of six as a Subject Matter Expert, steering them through a successful month, and was honored with multiple 'Employee of the Month' awards.</p>
+            <p><strong>Transportation Specialist - I (Relay of Operations)</strong> - Amazon, India (Jun 2022 – Dec 2022)...</p>
+            <p><strong>IT Associate (Device and Digital Alexa and Kindle Operations)</strong> - Amazon, India (Oct 2020 – May 2022)...</p>
         </section>
         <section id="projects">
             <h2>Projects</h2>
-            <p><strong>Customer Experience Enhancement Tool</strong> | Python, SQL, Tableau<br>
-            • Developed tools using Python and JavaScript for analyzing customer feedback and performing sentiment analysis with NLP libraries.<br>
-            • Created actionable recommendations from data analysis to improve marketing and product development.<br>
-            • Designed and implemented data visualizations with D3.js and Tableau to present insights and trends to stakeholders.</p>
+            <p><strong>Customer Experience Enhancement Tool</strong> - Technologies: Python, SQL, Tableau...</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Muneeth Kumar Vangari. All rights reserved.</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
