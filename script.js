@@ -1,8 +1,8 @@
 function toggleMenu() {
-    var menu = document.getElementById("mobileMenu");
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
+    var menu = document.getElementById('menu');
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
     } else {
-        menu.style.display = "flex";
+        menu.classList.add('hidden');
     }
 }
