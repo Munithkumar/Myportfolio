@@ -6,152 +6,193 @@
     <title>Muneeth Kumar Vangari - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional CSS for Hamburger Menu */
-        .menu {
-            display: none;
+        /* Basic styles for the header and hamburger menu */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .menu-btn {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            background: none;
-            border: none;
+        header {
+            background: #222;
+            color: #fff;
+            padding: 10px 20px;
+            position: relative;
         }
-        .menu-btn:focus {
-            outline: none;
-        }
-        .menu-items {
+        nav {
             display: flex;
-            list-style-type: none;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
         }
-        .menu-items li {
-            margin-right: 20px;
+        .menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .menu-items a {
+        .menu li {
+            margin: 0 10px;
+        }
+        .menu a {
+            color: #fff;
             text-decoration: none;
-            color: #000;
+            font-weight: bold;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: #333;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            width: 200px;
+            border-radius: 5px;
+        }
+        .mobile-menu a {
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+            display: block;
+        }
+        .mobile-menu a:hover {
+            background: #555;
         }
         @media (max-width: 768px) {
             .menu {
-                display: block;
-            }
-            .menu-btn {
-                display: block;
-            }
-            .menu-items {
                 display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background: #fff;
-                border: 1px solid #ddd;
-                padding: 10px;
             }
-            .menu-items.active {
+            .hamburger {
                 display: flex;
             }
-            .menu-items li {
-                margin: 10px 0;
-            }
+        }
+        section {
+            padding: 20px;
+            background: #f4f4f4;
+            margin: 10px 0;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <button class="menu-btn" id="menu-btn">&#9776;</button>
-        <nav class="menu" id="menu">
-            <ul class="menu-items">
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="menu">
                 <li><a href="#summary">Summary</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
             </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#summary">Summary</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+            </div>
         </nav>
     </header>
-    <section id="summary">
-        <h1 id="name">Muneeth Kumar Vangari</h1>
-        <p>Software Engineer | Munithkumar55@gmail.com | <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a> | +1 (929) 425-6414 | Rolla, Missouri (Open to Relocate)</p>
-        <p>Dynamic professional with 2.3 years of experience in Python, SQL, and cloud technologies, specializing in scalable e-commerce development. Expertise in optimizing database performance, managing full software development life cycles, and enhancing data processing capabilities. Known for strong analytical prowess and effective collaboration in cross-functional teams.</p>
-    </section>
-    <section id="education">
-        <h1>Education</h1>
-        <p><strong>Missouri University of Science and Technology</strong><br>
-        Jan 2023 - Dec 2024<br>
-        Master of Science – Information Science and Technology<br>
-        GPA – 3.5<br>
-        Relevant Coursework: Managing the Cloud, Database Design, Software Systems Design, Project Management</p>
-        
-        <p><strong>Jawaharlal Nehru Technological University, Hyderabad</strong><br>
-        Aug 2016 – Oct 2020<br>
-        Bachelor of Technology – Computer Science and Engineering<br>
-        Grade – A</p>
-    </section>
-    <section id="skills">
-        <h1>Skills</h1>
-        <ul>
-            <li>Database Management & Query Languages: SQL, MySQL, Oracle SQL, SQL Server, Basic Teradata Query</li>
-            <li>Programming Languages: Python, Java, C, C++</li>
-            <li>Big Data Technologies: PySpark, Hadoop, Hive, Sqoop</li>
-            <li>Data Visualization: Tableau</li>
-            <li>Version Control: GitHub</li>
-            <li>Integrated Development Environments (IDEs): Visual Studio Code (VSCode), Sublime Text</li>
-            <li>Cloud Platforms & Development Tools: Amazon Web Services (AWS) including Amazon S3, EC2, RDS, Redshift, Lambda, GCP (BigQuery, Dataproc, Cloud Storage)</li>
-            <li>Scripting & Automation: Shell Scripting/Linux</li>
-            <li>Soft Skills: Leadership, Problem-Solving, Communication, Collaboration, Time Management, Adaptability, Self-learning</li>
-        </ul>
-    </section>
-    <section id="experience">
-        <h1>Work Experience</h1>
-        <article>
-            <h2>Transportation Specialist - I (Relay of Operations) – Amazon, India</h2>
-            <p>Jun 2022 – Dec 2022</p>
-            <ul>
-                <li>Analyzed transportation metrics with SQL, Tableau, and Excel to drive efficiency improvements and optimize delivery processes.</li>
-                <li>Coordinated transportation operations using Amazon TMS and Relay for timely and cost-effective deliveries, leveraging GPS tracking and route optimization software to maximize efficiency.</li>
-                <li>Ensured regulatory compliance with safety standards using Amazon's compliance management software and implemented safety protocols.</li>
-                <li>Collaborated with cross-functional teams using Amazon Chime and Slack to resolve transportation issues promptly.</li>
-                <li>Optimized logistics operations with Lean and Six Sigma methodologies, enhancing process efficiency.</li>
-                <li>Monitored shipment statuses in real-time using Amazon's logistics dashboard and utilized Amazon Redshift and Tableau for data analytics to reduce transportation costs and identify trends.</li>
-            </ul>
-        </article>
-        
-        <article>
-            <h2>IT Associate (Device and Digital Alexa and Kindle Operations) – Amazon, India</h2>
-            <p>Oct 2020 – May 2022</p>
-            <ul>
-                <li>Automated routine tasks and processes using Python and AWS Lambda, enhancing operational efficiency and reducing manual intervention.</li>
-                <li>Conducted data analysis and validation using SQL and MySQL to monitor system performance and improve data accuracy and integrity.</li>
-                <li>Utilized diagnostic tools and scripts, including Amazon's proprietary diagnostic platforms and Python, to identify and resolve technical issues with digital devices and services.</li>
-                <li>Provided technical support and troubleshooting for Amazon Kindle, Alexa, and other digital devices, utilizing Amazon Connect and Salesforce CRM to manage and resolve client issues efficiently.</li>
-                <li>Developed and maintained comprehensive support documentation and knowledge base articles using Confluence and SharePoint, aiding in effective troubleshooting and client education.</li>
-                <li>Monitored, analyzed, and prevented concession abuse to uphold policy compliance and mitigate fraudulent activities related to concessions at Amazon.</li>
-                <li>Guided a team of six as a Subject Matter Expert, steering them through a successful month, and was honored with multiple 'Employee of the Month' awards.</li>
-            </ul>
-        </article>
-    </section>
-    <section id="projects">
-        <h1>Projects</h1>
-        <article>
-            <h2>Customer Experience Enhancement Tool</h2>
-            <p>Python, SQL, Tableau</p>
-            <ul>
-                <li>Developed tools using Python and JavaScript for analyzing customer feedback and performing sentiment analysis with NLP libraries.</li>
-                <li>Created actionable recommendations from data analysis to improve marketing and product development.</li>
-                <li>Designed and implemented data visualizations with D3.js and Tableau to present insights and trends to stakeholders.</li>
-            </ul>
-        </article>
-    </section>
-    <footer>
-        <p>&copy; 2024 Muneeth Kumar Vangari. All rights reserved.</p>
-    </footer>
-    <script>
-        // JavaScript for Hamburger Menu Toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('active');
-        });
-    </script>
-</body>
-</html>
+    <main class="container">
+        <section id="summary">
+            <h1>Muneeth Kumar Vangari</h1>
+            <div class="contact-info">
+                <a href="mailto:Munithkumar55@gmail.com">Munithkumar55@gmail.com</a>
+                <a href="https://www.linkedin.com/in/muneeth-kumar-vangari" target="_blank">LinkedIn</a>
+                <span>+1(929) 425-6414</span>
+                <span>Rolla, Missouri (Open to Relocate)</span>
+            </div>
+            <h2>Summary</h2>
+            <p>Dynamic professional with 2.3 years of experience in Python, SQL, and cloud technologies, specializing in scalable e-commerce development. Expertise in optimizing database performance, managing full software development life cycles, and enhancing data processing capabilities. Known for strong analytical prowess and effective collaboration in cross-functional teams.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>Missouri University of Science and Technology</strong> (Jan 2023 – Dec 2024)<br>
+            Master of Science – Information Science and Technology (GPA – 3.5)<br>
+            Relevant Coursework: Managing the Cloud, Database Design, Software Systems Design, Project Management</p>
+            <p><strong>Jawaharlal Nehru Technological University, Hyderabad</strong> (Aug 2016 – Oct 2020)<br>
+            Bachelor of Technology – Computer Science and Engineering (Grade – A)</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p><strong>Database Management & Query Languages:</strong> SQL, MySQL, Oracle SQL, SQL Server, Basic Teradata Query<br>
+            <strong>Programming Languages:</strong> Python, Java, C, C++<br>
+            <strong>Big Data Technologies:</strong> PySpark, Hadoop, Hive, Sqoop<br>
+            <strong>Data Visualization:</strong> Tableau<br>
+            <strong>Version Control:</strong> GitHub<br>
+            <strong>Integrated Development Environments (IDEs):</strong> Visual Studio Code (VSCode), Sublime Text<br>
+            <strong>Cloud Platforms & Development Tools:</strong> AWS (Amazon S3, EC2, RDS, Redshift, Lambda), GCP (BigQuery, Dataproc, Cloud Storage)<br>
+            <strong>Scripting & Automation:</strong> Shell Scripting/Linux<br>
+            <strong>Soft Skills:</strong> Leadership, Problem-Solving, Communication, Collaboration, Time Management, Adaptability, Self-learning</p>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <p><strong>Transportation Specialist - I (Relay of Operations) – Amazon, India</strong> (Jun 2022 – Dec 2022)<br>
+            • Analyzed transportation metrics with SQL, Tableau, and Excel to drive efficiency improvements and optimize delivery processes.<br>
+            • Coordinated transportation operations using Amazon TMS and Relay for timely and cost-effective deliveries, leveraging GPS tracking and route optimization software to maximize efficiency.<br>
+            • Ensured regulatory compliance with safety standards using Amazon's compliance management software and implemented safety protocols.<br>
+            • Collaborated with cross-functional teams using Amazon Chime and Slack to resolve transportation issues promptly.<br>
+            • Optimized logistics operations with Lean and Six Sigma methodologies, enhancing process efficiency.<br>
+            • Monitored shipment statuses in real-time using Amazon's logistics dashboard and utilized Amazon Redshift and Tableau for data analytics to reduce transportation costs and identify trends.</p>
+            <p><strong>IT Associate (Device and Digital Alexa and Kindle Operations) – Amazon, India</strong> (Oct 2020 – May 2022)<br>
+            • Automated routine tasks and processes using Python and AWS Lambda, enhancing operational efficiency and reducing manual intervention.<br>
+            • Conducted data analysis and validation using SQL and MySQL to monitor system performance and improve data accuracy and integrity.<br>
+            • Utilized diagnostic tools and scripts, including Amazon's proprietary diagnostic platforms and Python, to identify and resolve technical issues with digital devices and services.<br>
+            • Provided technical support and troubleshooting for Amazon Kindle, Alexa, and other digital devices, utilizing Amazon Connect and Salesforce CRM to manage and resolve client issues efficiently.<br>
+            • Developed and maintained comprehensive support documentation and knowledge base articles using Confluence and SharePoint, aiding in effective troubleshooting and client education.<br>
+            • Monitored, analyzed, and prevented concession abuse to uphold policy compliance and mitigate fraudulent activities related to concessions at Amazon.<br>
+            • Guided a team of six as a Subject Matter Expert, steering them through a successful month, and was honored with multiple 'Employee of the Month' awards.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p><strong>Customer Experience Enhancement Tool</strong> | Python, SQL, Tableau<br>
+            • Developed tools using Python and JavaScript for analyzing customer feedback and performing sentiment analysis
