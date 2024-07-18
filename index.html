@@ -5,11 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muneeth Kumar Vangari - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for Hamburger Menu */
+        .menu {
+            display: none;
+        }
+        .menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .menu-btn:focus {
+            outline: none;
+        }
+        .menu-items {
+            display: flex;
+            list-style-type: none;
+        }
+        .menu-items li {
+            margin-right: 20px;
+        }
+        .menu-items a {
+            text-decoration: none;
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: block;
+            }
+            .menu-btn {
+                display: block;
+            }
+            .menu-items {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #fff;
+                border: 1px solid #ddd;
+                padding: 10px;
+            }
+            .menu-items.active {
+                display: flex;
+            }
+            .menu-items li {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <button class="menu-btn" id="menu-btn">&#9776;</button>
+        <nav class="menu" id="menu">
+            <ul class="menu-items">
                 <li><a href="#summary">Summary</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -94,5 +146,12 @@
     <footer>
         <p>&copy; 2024 Muneeth Kumar Vangari. All rights reserved.</p>
     </footer>
+    <script>
+        // JavaScript for Hamburger Menu Toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
